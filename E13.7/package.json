@@ -1,0 +1,44 @@
+{
+  "name": "hw_13_7_skillf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "concurrently \"webpack serve --config webpack.dev.js\" \"json-server --watch db.json --port 3010 \"",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "lint-staged": {
+    "*.(js|jsx)": [
+      "npm run lint:write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "eslint": "^8.37.0",
+    "eslint-config-semistandard": "^17.0.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
+    "json-server": "^0.17.3",
+    "lint-staged": "^13.2.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2",
+    "webpack-merge": "^5.8.0"
+  }
+}
