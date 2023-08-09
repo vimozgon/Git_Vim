@@ -1,0 +1,9 @@
+main {
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
